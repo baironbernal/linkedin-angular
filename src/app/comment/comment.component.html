@@ -1,0 +1,36 @@
+<div class="comment"  [@simpleFadeAnimation]="'in'">
+      <div class="comment__buttons">
+            <div>
+                  <img src="assets/images/icon-plus.svg" alt="plus"  class="comment__plus" (click)="plusOrLess(comment.id, 1)">
+            </div>
+            <input class="comment__input" type="text" name="numer" id="number" value="{{comment.score}}">
+            <div>
+                  <img src="assets/images/icon-minus.svg" alt="minus"  class="comment__minus" (click)="plusOrLess(comment.id, -1)">
+            </div>
+      </div>
+      <div class="comment__details">
+            <div class="comment__details-top">
+                  <div *ngIf="comment">
+                        <img class="comment__avatar" src="{{ comment.user.image.png }}" alt="avatar">
+                        <b class="comment__person">{{ comment.user.username }}</b>
+                        <span class="comment__month">{{ comment.createdAt }}</span>
+                  </div>
+                  <div class="comment__reply" (click)="reply(comment.user.username, comment.id)">
+                        <img class="comment__icon-reply" src="assets/images/icon-reply.svg" alt="reply">
+                        <span class="comment__text-reply">Reply</span>
+                  </div>
+            </div>
+            <div class="comment__details-comment">
+                  <p class="comment__text">{{ comment.content }}</p>
+            </div>
+      </div>
+</div>
+
+<section class="repplies" *ngIf="comment.replies">
+      <div *ngFor="let reply of comment.replies">
+            <app-reply *ngIf="reply.id" [reply]="reply" [commentId]="comment.id"></app-reply> 
+            <ng-container *ngIf="reply.id == 0;">
+                  <app-reply-input [commentId]="comment.id"></app-reply-input>
+              </ng-container>
+      </div>
+</section>

@@ -1,0 +1,40 @@
+@use '../../sass/mixins/mixin' as mixin;
+@import '../../sass/variables';
+
+header {
+      position: fixed;
+      width: 100%;
+      background-color: $white;
+      z-index: 100;
+      .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+      
+            &__search-input {
+                  display: none;
+            }
+
+            &__second-icons {
+                  border-left: 1px solid $gray;
+            }
+
+            &__icon {
+                  padding: 10px;
+                  cursor: pointer;
+                  width: 32px;
+                  height: 32px;
+            }
+
+            &__icons, &__second-icons  {
+                  display: flex;
+                  column-gap: 10px;
+                  p {
+                        display: none;
+                  }
+            }
+
+            
+      }
+}

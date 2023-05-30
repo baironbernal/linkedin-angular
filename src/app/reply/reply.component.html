@@ -1,0 +1,23 @@
+<div class="reply">
+      <div class="reply__buttons">
+            <img src="assets/images/icon-minus.svg" alt="minus"  class="reply__minus">
+            <input class="reply__input" type="text" name="numer" id="number" value="{{reply.score }}">
+            <img src="assets/images/icon-plus.svg" alt="plus"  class="reply__plus">
+      </div>
+      <div class="reply__details">
+            <div class="reply__details-top">
+                  <div>
+                        <img class="reply__avatar" src="{{reply.user.image.png }}" alt="avatar">
+                        <b class="reply__person">{{reply.user.username }}</b>
+                        <span class="reply__month">{{reply.createdAt }}</span>
+                  </div>
+                  <div class="reply__reply" (click)="answerReply(reply.user.username, commentId)">
+                        <img class="reply__icon-reply" src="assets/images/icon-reply.svg" alt="reply">
+                        <span class="reply__text-reply">Reply</span>
+                  </div>
+            </div>
+            <div class="reply__details-comment">
+                  <p class="reply__text">{{reply.content }}</p>
+            </div>
+      </div>
+</div>

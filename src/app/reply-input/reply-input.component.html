@@ -1,0 +1,12 @@
+<div class="reply text" [@simpleFadeAnimation]="'in'">
+            <img class="reply__avatar img" src="assets/images/avatars/image-amyrobson.png" alt="avatar">
+            <input class="reply__input-text" name="txtInput" 
+                  placeholder="Add comment" [formControl]="txtInput" 
+                  *ngIf="replyingTo; else withReplyingTo" [ngModel]="'@' + replyingTo + ','">
+
+            <ng-template #withReplyingTo>
+                  <input class="reply__input-text" name="txtInput" 
+                  placeholder="Add comment" [formControl]="txtInput" [ngModel]="">
+            </ng-template>
+            <button class="reply__button-send" (click)="addComment()">SEND</button>
+</div>

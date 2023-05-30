@@ -1,0 +1,12 @@
+
+<app-header></app-header>
+<main class="main-content">
+    <app-left-side></app-left-side>
+    <main class="main">
+        <div *ngFor="let comment of comments$ | async; trackBy: trackByItem">
+            <app-comment *ngIf="comment.id;" [comment]="comment"></app-comment>
+        </div>
+        <app-reply-input></app-reply-input>
+    </main>
+    <app-right-side></app-right-side>
+</main>

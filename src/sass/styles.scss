@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $very-light-gray;
+    color: $gray;
+    font-family: $font-type;
+    font-size: $font-size;
+    line-height: 1.6em;
+    min-height: 100vh;
+    height: auto;
+}
+
+.repplies {
+    border-left: 4px solid $gray;
+    margin-left: 5%;
+    padding-left: 3%;
+}
+
+
+::-webkit-input-placeholder {
+    text-align:center;
+ }
+
