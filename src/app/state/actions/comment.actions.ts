@@ -25,7 +25,3 @@ export const reply = createAction(
       props<{ content: string, commentId: number }>()
 );
 
-export const plusOrLess = createAction(
-      '[COMMENT] Sumar puntaje de comentario',
-      props<{ commentId: number, operation: number }>()
-);

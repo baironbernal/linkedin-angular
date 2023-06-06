@@ -1,0 +1,22 @@
+@use '../../sass/mixins/mixin' as mixin;
+@import '../../sass/variables';
+
+.right-side {
+      &__profile {
+            display: flex;
+            gap: 20px;
+
+            &__button {
+                  background-color: red;
+            }
+      }
+
+      span {
+            display: block;      
+      }
+
+
+      @media(min-width: $desktop) {
+            width: 300px;
+      }
+}

@@ -10,13 +10,7 @@ const _commentReducer = createReducer(
   initialState,
   on(actions.load, (state) => { return { ...state } }),
   on(actions.loadedItems, (state, { comments }) => { return { ...state, comments} }),
-  on(actions.plusOrLess, (state, {commentId, operation}) => {
-    let d = state.comments.map(comment => {
-      if (commentId === comment.id ) return {...comment, score: comment.score + operation }
-      return comment;
-    })
-    return {...state, comments: d}
-  }),
+ 
 
   on(actions.create, (state, { comment }) => { return { ...state, comments: [...state.comments,comment] }}),
   on(actions.createInputReply, (state, { username, commentId }) => {

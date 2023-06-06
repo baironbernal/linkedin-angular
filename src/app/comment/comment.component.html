@@ -1,27 +1,50 @@
-<div class="comment"  [@simpleFadeAnimation]="'in'">
-      <div class="comment__buttons">
-            <div>
-                  <img src="assets/images/icon-plus.svg" alt="plus"  class="comment__plus" (click)="plusOrLess(comment.id, 1)">
+<div class="post" [@simpleFadeAnimation]="'in'">
+      <div class="post__details">
+            <img class="post__avatar" src="{{ comment.user.image.png }}" alt="avatar">
+            <div class="post__info-text">
+                  <b class="post__person">{{ comment.user.username }}</b>
+                  <p>Software Engineer and Web Developer</p>
+                  <div class="post__time">
+                        <span>{{ comment.createdAt }}</span>
+                        <span class="material-icons">public</span>
+                  </div>
             </div>
-            <input class="comment__input" type="text" name="numer" id="number" value="{{comment.score}}">
-            <div>
-                  <img src="assets/images/icon-minus.svg" alt="minus"  class="comment__minus" (click)="plusOrLess(comment.id, -1)">
+            <div class="post__icons">
+                  <a href="">
+                        <span class="material-icons">more_horiz</span>
+                  </a>
+                  <a href="">
+                        <span class="material-icons">close</span>
+                  </a>
             </div>
       </div>
-      <div class="comment__details">
-            <div class="comment__details-top">
-                  <div *ngIf="comment">
-                        <img class="comment__avatar" src="{{ comment.user.image.png }}" alt="avatar">
-                        <b class="comment__person">{{ comment.user.username }}</b>
-                        <span class="comment__month">{{ comment.createdAt }}</span>
-                  </div>
-                  <div class="comment__reply" (click)="reply(comment.user.username, comment.id)">
-                        <img class="comment__icon-reply" src="assets/images/icon-reply.svg" alt="reply">
-                        <span class="comment__text-reply">Reply</span>
-                  </div>
+      <div class="post__comment">
+            <p>{{ comment.content }}</p>
+      </div>
+      <div class="post__icons">
+            <div class="post__icon">
+                  <span class="material-icons">
+                        thumb_up_off_alt
+                        </span>
+                        <span>Like</span>
             </div>
-            <div class="comment__details-comment">
-                  <p class="comment__text">{{ comment.content }}</p>
+            <div class="post__icon" (click)="reply(comment.user.username, comment.id)">
+                  <span class="material-icons">
+                        insert_comment
+                        </span>
+                  <span>Comment</span>
+            </div>
+            <div class="post__icon">
+                  <span class="material-icons">
+                        share
+                        </span>
+                  <span>Repost</span>
+            </div>
+            <div class="post__icon">
+                  <span class="material-icons">
+                        send
+                        </span>
+                  <span>Send</span>
             </div>
       </div>
 </div>

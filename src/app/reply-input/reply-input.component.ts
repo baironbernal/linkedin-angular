@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-reply-input',
   templateUrl: './reply-input.component.html',
-  styleUrls: ['../shared/comments-styles.component.scss'],
+  styleUrls: ['./reply-input.component.scss'],
   animations: [
     trigger('simpleFadeAnimation', [
       transition(':enter', [

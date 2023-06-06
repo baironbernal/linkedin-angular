@@ -4,9 +4,19 @@
       width: $mobile;
       margin: 0 auto;
       height: 100%;
-      padding: 20px 0px;
+      display: flex;
+      flex-direction: column;
+      gap: $gap-mobile;
 
       @media(min-width: $desktop) {
-            width: $main-container;
+            margin-top: 4.6rem;
+            min-width: $desktop;
+            display: flex;
+            flex-direction: row;
+            gap: $gap-mobile;
       }
+
 }
+
+
+

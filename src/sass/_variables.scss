@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 //widths
-$mobile: 340px;
+$mobile: 450px;
 $desktop: 1110px;
 $main-container: 700px;
 
@@ -10,6 +10,12 @@ $moderate-blue: hsl(238, 40%, 52%);
 $soft-Red: hsl(358, 79%, 66%);
 $light-grayish-blue: hsl(239, 57%, 85%);
 $pale-red: hsl(357, 100%, 86%);
+
+
+//Paddings inside
+$paddings-insides-divs: 12px;
+$border-radius-divs: 12px;
+$gap-mobile: 30px;
 
 //Neutral
 
@@ -30,5 +36,5 @@ $weight-medium: 500;
 $weight-high: 700;
 
 //borders
-
+$border-radius-px-buttons: 60px;
 $border-radius: 8px;

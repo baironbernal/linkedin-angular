@@ -1,14 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../state/app.state';
-import { createInputReply, reply } from '../state/actions/comment.actions';
+import { createInputReply} from '../state/actions/comment.actions';
 import { Reply } from '../models/reply';
 import { editReplyngTo } from '../state/actions/replyng.actions';
 
 @Component({
   selector: 'app-reply',
   templateUrl: './reply.component.html',
-  styleUrls: ['../shared/comments-styles.component.scss']
+  styleUrls: ['../comment/comment.component.scss']
 })
 export class ReplyComponent implements OnInit {
 

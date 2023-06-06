@@ -2,15 +2,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { CommentComponent } from './comment/comment.component';
 import { ReplyComponent } from './reply/reply.component';
 import { ReplyInputComponent } from './reply-input/reply-input.component';
 import { HttpClientModule } from '@angular/common/http';
-
 //ngrx
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -22,6 +19,8 @@ import { HeaderComponent } from './header/header.component';
 import { LeftSideComponent } from './left-side/left-side.component';
 import { RightSideComponent } from './right-side/right-side.component';
 
+//Angular Material For Icons
+import {MatIconModule} from '@angular/material/icon';
     
 @NgModule({
   declarations: [
@@ -38,6 +37,7 @@ import { RightSideComponent } from './right-side/right-side.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatIconModule,
     StoreModule.forRoot(appReducers,{
       runtimeChecks: {
         strictStateImmutability: false,

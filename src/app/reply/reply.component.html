@@ -1,23 +1,29 @@
-<div class="reply">
-      <div class="reply__buttons">
-            <img src="assets/images/icon-minus.svg" alt="minus"  class="reply__minus">
-            <input class="reply__input" type="text" name="numer" id="number" value="{{reply.score }}">
-            <img src="assets/images/icon-plus.svg" alt="plus"  class="reply__plus">
-      </div>
-      <div class="reply__details">
-            <div class="reply__details-top">
-                  <div>
-                        <img class="reply__avatar" src="{{reply.user.image.png }}" alt="avatar">
-                        <b class="reply__person">{{reply.user.username }}</b>
-                        <span class="reply__month">{{reply.createdAt }}</span>
-                  </div>
-                  <div class="reply__reply" (click)="answerReply(reply.user.username, commentId)">
-                        <img class="reply__icon-reply" src="assets/images/icon-reply.svg" alt="reply">
-                        <span class="reply__text-reply">Reply</span>
+
+<div class="post" [@simpleFadeAnimation]="'in'">
+      <div class="post__details">
+            <img class="post__avatar" src="{{reply.user.image.png }}" alt="avatar">
+            <div class="post__info-text">
+                  <b class="post__person">{{ reply.user.username }}</b>
+                  <p>Software Engineer and Web Developer</p>
+                  <div class="post__time">
+                        <span>{{ reply.createdAt }}</span>
+                        <span class="material-icons">public</span>
                   </div>
             </div>
-            <div class="reply__details-comment">
-                  <p class="reply__text">{{reply.content }}</p>
+            <div class="post__icons">
+                  
             </div>
       </div>
+      <div class="post__comment">
+            <p>{{ reply.content }}</p>
+      </div>
+
+      <div class="post__reply" (click)="answerReply(reply.user.username, commentId)">
+            <img class="reply__icon-reply" src="assets/images/icon-reply.svg" alt="reply">
+            &nbsp; 
+            <span class="reply__text-reply">Reply</span>
+      </div>
+      
 </div>
+&nbsp; 
+

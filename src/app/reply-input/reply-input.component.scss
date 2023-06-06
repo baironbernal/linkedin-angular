@@ -1,0 +1,15 @@
+@use '../../sass/mixins/mixin' as mixin;
+@import '../../sass/variables';
+.reply {
+
+    &__post{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    } 
+
+    &__input-text {
+        width: 80%;
+        border: 2px solid $very-light-gray;
+    }
+}
