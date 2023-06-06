@@ -6,15 +6,23 @@
             display: flex;
             gap: 20px;
 
-            &__button {
-                  background-color: red;
-            }
+            
       }
 
       span {
             display: block;      
       }
-
+      &__button {
+            margin: 0.4rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 6px;
+            border-radius: $boder-radius-buttons;
+      }
+      &__button:hover{
+            background-color: $light-gray;
+      }
 
       @media(min-width: $desktop) {
             width: 300px;

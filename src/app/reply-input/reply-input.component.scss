@@ -12,4 +12,11 @@
         width: 80%;
         border: 2px solid $very-light-gray;
     }
+
+    &__input-text:hover {
+     background-color: $light-gray;
+    
+    }
+
+
 }
